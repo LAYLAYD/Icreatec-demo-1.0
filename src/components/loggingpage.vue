@@ -78,7 +78,7 @@
 .accounticon {
   position: absolute;
   top: 50%;
-  left: 390px;
+  left: 90%;
   transform: translateY(-50%);
 }
 

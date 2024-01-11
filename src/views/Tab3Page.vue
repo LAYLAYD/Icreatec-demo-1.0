@@ -100,7 +100,7 @@
   border-radius: 20px;
   box-shadow: 0px 0px 10px rgba(69, 14, 97, 0.2);
   position: relative;
-  top: 35px;
+  top: 58px;
   left: 50%;
   transform: translateX(-50%);
 }
