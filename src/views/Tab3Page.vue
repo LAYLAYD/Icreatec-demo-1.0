@@ -14,7 +14,7 @@
 
       <div class="USERTAB">
         <a href="https://shop.sosleek.io/premium-card">
-        <img src="/public/jimi.png" class="user-image" />
+          <img src="/public/jimi.png" class="user-image" />
         </a>
       </div>
 
@@ -48,9 +48,10 @@
         </a>
       </div>
 
-      <div class="LOGGINGTAB">
-        <div class="loggingsquare"></div>
-        <p class="loggingtext">LOG OUT</p>
+      <div>
+        <router-link to="/logging" class="LOGGINGTAB">
+          <ion-button expand="block" class="logoutbotton">log out</ion-button>
+        </router-link>
       </div>
 
     </ion-content>
@@ -58,6 +59,17 @@
 </template>
 
 <style>
+.logoutbotton {
+  bottom: 17%;
+  position: absolute;
+  width: 85%;
+  height: 4%;
+  left: 50%;
+  transform: translateX(-50%);
+  --border-radius: 12px;
+  --background: #469bb0;
+}
+
 .line {
   width: 63%;
   height: 2px;
@@ -88,7 +100,7 @@
   border-radius: 20px;
   box-shadow: 0px 0px 10px rgba(69, 14, 97, 0.2);
   position: relative;
-  top: 18px;
+  top: 35px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -153,15 +165,7 @@
   top: 80%;
 }
 
-.loggingtext {
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  top: 81%;
-  font-size: 26px;
-  font-weight: bold;
-  color: red;
-}
+
 </style>
 
 <script setup lang="ts">

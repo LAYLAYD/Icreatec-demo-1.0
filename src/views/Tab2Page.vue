@@ -41,26 +41,18 @@
 </template>
 
 <style scoped>
-.walletsquare {
-  width: 57vw;
-  height: 130px;
-  background-color: transparent;
-  position: absolute;
-  left: 50%;
-  top: 80px;
-  transform: translateX(-50%);
-  border: 5px solid rgb(14, 128, 168);
-  border-radius: 20px;
+.custom-button {
+  position: relative;
+  top: 8px;
+  left: 85%;
+  --background: #ffffff;
+  
 
 }
-.buttonbill {
-  position: relative;
-  top: 2%;
-  left: 85%;
-}
 .custom-icon {
-  font-size: 24px; 
-  --color: red;
+  font-size: 28px; 
+  color: rgb(64, 57, 57);
+  
 }
 
 .WALLET {
@@ -139,7 +131,8 @@
 .PRICEFLOW {
   position: relative;
   top: 125px;
-  left: 16%;
+  left: 50%;
+  transform: translateX(-50%);
   width: 335px;
   height: 227px;
 }

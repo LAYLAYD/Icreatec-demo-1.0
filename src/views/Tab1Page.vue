@@ -2,7 +2,9 @@
   <ion-page>
     <ion-header>
       <ion-toolbar>
-        <ion-title>Orders</ion-title>
+        <ion-title>
+          Orders <router-link to="/tabs/input" class="input-link" style="margin-left: 73%;">add＋</router-link>
+        </ion-title>
       </ion-toolbar>
     </ion-header>
     <ion-content :fullscreen="true">
@@ -11,9 +13,8 @@
           <ion-title size="large">Tab 1</ion-title>
         </ion-toolbar>
       </ion-header>
-
       <div class="ORDERTAB">
-        <router-link to="/tabs/monitor" class="orderimage">
+        <router-link to="/tabs/chart" class="orderimage">
           <img src="/public/redwine.jpg" style="width: 80px; height: 80px;" />
         </router-link>
         <div class="square" style="background-color: rgb(255, 255, 255);"></div>
@@ -22,12 +23,8 @@
         <p class="text-line3" style="text-align: right; color: rgb(43, 48, 104);">shipping</p>
 
         <ion-button id="claim1" class="claim">claim</ion-button>
-        <ion-alert
-         trigger="claim1"
-         header="Claim Received"
-         message="40% of Total Fee will refund to your account after checking"
-         :buttons="alertButtons"
-        ></ion-alert>
+        <ion-alert trigger="claim1" header="Claim Received"
+          message="40% of Total Fee will refund to your account after checking" :buttons="alertButtons"></ion-alert>
       </div>
 
       <div class="ORDERTAB">
@@ -35,18 +32,14 @@
           <img src="/public/flesh.jpg" style="width: 80px; height: 80px;" />
         </router-link>
         <div class="square" style=" background-color:rgb(255, 255, 255);"></div>
-        <p class="text-line1" style="text-align: left;">🦞 Kai Wagyu<br>a5 wagyu ribeye steak  </p>
+        <p class="text-line1" style="text-align: left;">🦞 Kai Wagyu<br>a5 wagyu ribeye steak </p>
         <p class="text-line2" style="text-align: left;">$189.99 Insurance<br> $4799.95 Total </p>
         <p class="text-line3" style="text-align: right; color: rgb(241, 56, 59);">issue</p>
 
 
         <ion-button id="claim2" class="claim">CLAIM</ion-button>
-        <ion-alert
-         trigger="claim2"
-         header="Claim Received"
-         message="Insurance compensation alraedy refund to your account"
-         :buttons="alertButtons"
-        ></ion-alert>
+        <ion-alert trigger="claim2" header="Claim Received"
+          message="Insurance compensation alraedy refund to your account" :buttons="alertButtons"></ion-alert>
 
       </div>
 
@@ -61,12 +54,9 @@
 
 
         <ion-button id="claim3" class="claim">claim</ion-button>
-        <ion-alert
-         trigger="claim3"
-         header="Claim Received"
-         message="Shipment has arrived !"
-         :buttons="alertButtons"
-        ></ion-alert>
+        <ion-alert trigger="claim3" header="Claim Received" message="Shipment has arrived !"
+          :buttons="alertButtons">
+        </ion-alert>
       </div>
 
     </ion-content>
@@ -75,7 +65,11 @@
 
 
 <style scoped>
-
+.input-link {
+  text-decoration: none;
+  color: inherit;
+  border-bottom: none;
+}
 .claim {
   position: absolute;
   top: 72%;
@@ -87,7 +81,6 @@
   --border-radius: 12px;
   --background: rgb(245, 246, 249);
   --color: rgb(14, 128, 168);
-   
 }
 
 .ORDERTAB {
@@ -101,6 +94,7 @@
   margin-bottom: 5%;
   top: 15px;
 }
+
 .text-line1 {
   position: absolute;
   top: 9.5%;
@@ -111,6 +105,7 @@
   width: 100%;
   text-align: center;
 }
+
 .text-line2 {
   position: absolute;
   top: 41.5%;
@@ -122,6 +117,7 @@
   width: 100%;
   text-align: center;
 }
+
 .text-line3 {
   position: absolute;
   top: 5%;
@@ -131,6 +127,7 @@
   font-weight: bold;
   width: 100%;
 }
+
 .orderimage {
   position: relative;
   top: 120px;
