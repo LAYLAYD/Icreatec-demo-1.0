@@ -1,13 +1,21 @@
 <template>
   <ion-page>
     <ion-content :fullscreen="true">
+      <div>
+        <div class="tempsquare1"></div>
+        <p class="containertext" style="color: rgb(131, 123, 123);">container</p>
+        <p class="containertext" style="color: rgb(0, 0, 0); margin-top:75px;">MNBU9024120</p>
+        <img src="/public/wine.png" class="wine-image">
+        <P class="winetext">red wine,<br>non-frozen,<br>beverage</P>
+      </div>
+
       <div class="TEMPERTAB">
         <div class="tempsquare" style="width: 55%; left:50%;"></div>
         <div class="tempsquare" style="width: 21%; left:92%;"></div>
 
         <div class="circle-progress">
           <div class="circle-progress__circle"></div>
-          <div class="circle-progress__percentage">{{11}}</div>
+          <div class="circle-progress__percentage">{{ 11 }}</div>
           <img src="/public/humidty.png" class="humidty-image">
           <P class="humidtytext">humidty</P>
 
@@ -53,18 +61,6 @@
   border: 10px solid rgb(78, 103, 143);
 }
 
-.circle-progress__fill {
-  position: absolute;
-  top: 0;
-  left: 10px;
-  width: 50%;
-  height: 50%;
-  border-radius: 50%;
-  clip: rect(0, 50%, 100%, 0);
-  background-color: rgb(89, 156, 175); 
-  transform-origin: center center;
-}
-
 .circle-progress__percentage {
   position: absolute;
   top: 50%;
@@ -74,6 +70,7 @@
   font-weight: bold;
   color: rgb(28, 107, 197);
 }
+
 .chart-container {
   position: absolute;
   left: 50%;
@@ -81,14 +78,53 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  top: 160px;
+  top: 250px;
   width: 80%;
 }
 
 .TEMPERTAB {
   position: relative;
-  top: 5%;
+  top: 18%;
   left: 35%;
+  transform: translateX(-50%);
+}
+
+.tempsquare1 {
+  height: 100px;
+  width: 82%;
+  position: absolute;
+  left: 49%;
+  top: 60px;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
+}
+
+.wine-image {
+  position: absolute;
+  left: 62%;
+  top: 4%;
+  width: 55px;
+  height: 55px;
+}
+
+.winetext {
+  font-size: 20x;
+  font-weight: bold;
+  position: absolute;
+  left: 81%;
+  top: 16px;
+  transform: translateX(-50%);
+  color: rgb(0, 0, 0);
+}
+
+.containertext {
+  font-size: 32px;
+  font-weight: bold;
+  position: absolute;
+  left: 34%;
+  top:-10px;
   transform: translateX(-50%);
 }
 
@@ -100,7 +136,7 @@
   transform: translate(-50%, -50%);
   border-radius: 20px;
   z-index: -1;
-  background-color: rgb(237, 244, 243);
+  background-color: rgb(255, 255, 255);
 }
 
 .temp-image {
@@ -110,6 +146,7 @@
   height: 90px;
   top: 5px;
 }
+
 .humidty-image {
   position: absolute;
   left: 53%;
@@ -117,6 +154,7 @@
   width: 45px;
   height: 45px;
 }
+
 .text-temp {
   font-size: 54px;
   font-weight: bold;
@@ -125,8 +163,9 @@
   top: -50PX;
   transform: translateX(-50%);
   color: rgb(89, 156, 175);
-
 }
+
+
 .humidtytext {
   font-size: 18px;
   font-weight: bold;
@@ -137,6 +176,7 @@
 
   color: rgb(78, 103, 143);
 }
+
 .text-tempflow {
   font-size: 34px;
   font-weight: bold;
@@ -148,21 +188,13 @@
   color: rgb(78, 103, 143);
 }
 
-.TEMPERFLOW {
-  width: 410px;
-  height: 267px;
-  border-radius: 20px;
-  border: 5px solid #167989;
-  position: absolute;
-  top: 200px;
-  left: 45px;
-}
+
 
 .LOCATION {
   position: absolute;
   left: 0;
   right: 0;
-  top: 480px;
+  top: 65%;
 }
 
 .locatesquare {
@@ -174,7 +206,7 @@
   top: 25px;
   border-radius: 20px;
   z-index: -1;
-  background-color: rgb(237, 244, 243);
+  background-color: rgb(255, 255, 255);
 }
 
 .MAP {
@@ -193,6 +225,10 @@
   top: px;
   color: rgb(43, 48, 104);
   font-weight: bold;
+}
+
+ion-content {
+  --background: #f2f2f2;
 }
 </style>
 

@@ -8,8 +8,9 @@
           NEVER GET LOST</p>
         </div>
       </div>
+      
       <div class="logging-container">
-        <ion-input label="Account" label-placement="floating" fill="outline" placeholder="Enter your account">
+       <ion-input label="Account" label-placement="floating" fill="outline" placeholder="Enter your account">
           <ion-icon :icon="personOutline" class="accounticon"></ion-icon>
         </ion-input>
         <br />
@@ -18,10 +19,16 @@
         </ion-input>
 
         <router-link to="/tabs/tab3">
-          <ion-button expand="block" class="login-button">Log in</ion-button>
+          <ion-button expand="block" class="login-button">User Log in</ion-button>
         </router-link>
         <div class="loggingtext">
           <p>New members? <a href="http://www.icreatec.com/">Sign up now !</a></p>
+        </div>
+        <div class="adminlogging">
+        <router-link to="/admin">
+          <ion-button expand="block" class="login-button2">Admin Log in</ion-button>
+        </router-link>
+        <div class="loggingtext"></div>
         </div>
       </div>
 
@@ -31,6 +38,14 @@
 </template>
 
 <style scoped>
+.adminlogging {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 190%;
+  text-align: center;
+  width: 500PX;
+}
 .slogan {
   font-size: 26px;
   font-weight: bold;
@@ -42,7 +57,6 @@
   text-align: center;
   width: 500PX;
 }
-
 
 
 .logo {

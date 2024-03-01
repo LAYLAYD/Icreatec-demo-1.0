@@ -39,11 +39,16 @@ const routes: Array<RouteRecordRaw> = [
         path: 'chart',
         component: () => import('@/components/chart.vue'),
       },
+
     ],
   },
   {
     path: '/logging',
     component: () => import('@/components/loggingpage.vue'),
+  },
+  {
+    path: '/admin',
+    component: () => import('@/components/adminpage.vue'),
   },
 ];
 
