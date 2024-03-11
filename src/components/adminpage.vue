@@ -1,23 +1,15 @@
 <template>
     <ion-page>
-        <ion-header>
-            <ion-toolbar>
-
-                <ion-searchbar></ion-searchbar>
-
-            </ion-toolbar>
-        </ion-header>
+        <ion-toolbar>
+            <div style="display: flex; align-items: center; justify-content: center; width: 100%;">
+                <img src="public/ic.png" alt="Logo" style="width: 40%;">
+            </div>
+        </ion-toolbar>
         <ion-content :fullscreen="true">
-            <ion-header collapse="condense">
-                <ion-toolbar>
-                    <ion-title size="large">Tab 1</ion-title>
-                </ion-toolbar>
-            </ion-header>
-
-            <ion-button color="secondary">order No.</ion-button>
-            <ion-button color="primary">container</ion-button>
-            <ion-button color="success">Status</ion-button>
-
+            <div style="display: flex; align-items: center;">
+                <ion-searchbar style="flex: 1; width: 75%;" placeholder="search container number"></ion-searchbar>
+                <ion-button color="dark">Track</ion-button>
+            </div>
             <div class="ordertab1">
                 <OrderTab />
             </div>
@@ -34,8 +26,8 @@
         </ion-content>
     </ion-page>
 </template>
-  
-  
+
+
 <style scoped>
 .input-link {
     text-decoration: none;
@@ -56,9 +48,9 @@ ion-content {
     --background: #f2f2f2;
 }
 </style>
-  
-  
-  
+
+
+
 <script setup lang="ts">
 import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/vue';
 import { IonAlert, IonButton } from '@ionic/vue';
@@ -66,4 +58,3 @@ import OrderTab from '@/components/ordertab.vue';
 const alertButtons = ['GOOD'];
 
 </script>
-  
