@@ -1,16 +1,12 @@
 <template>
   <ion-page>
     <ion-header>
-      <ion-toolbar>
+      <ion-toolbar style="background-color: black;">
         <ion-title>Wallet</ion-title>
       </ion-toolbar>
     </ion-header>
     <ion-content :fullscreen="true">
-      <ion-header collapse="condense">
-        <ion-toolbar>
-          <ion-title size="large">Tab 2</ion-title>
-        </ion-toolbar>
-      </ion-header>
+
 
       <div class="WALLET">
         <h1 class="dollar-text">$14.06</h1>
@@ -19,7 +15,7 @@
 
       <div class="buttonbill">
         <ion-button @click="navigateToChildPage" class="custom-button">
-          <ion-icon name="newspaper-outline" class="custom-icon" style ></ion-icon>
+          <ion-icon name="newspaper-outline" class="custom-icon" style></ion-icon>
         </ion-button>
       </div>
 
@@ -46,13 +42,14 @@
   top: 8px;
   left: 85%;
   --background: #ffffff;
-  
+
 
 }
+
 .custom-icon {
-  font-size: 28px; 
+  font-size: 28px;
   color: rgb(64, 57, 57);
-  
+
 }
 
 .WALLET {
@@ -136,11 +133,10 @@
   width: 335px;
   height: 227px;
 }
-
 </style>
 
 <script setup lang="ts">
-import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent,IonIcon } from '@ionic/vue';
+import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonIcon } from '@ionic/vue';
 import ExploreContainer from '@/components/ExploreContainer.vue';
 import { useRouter } from 'vue-router';
 const router = useRouter();

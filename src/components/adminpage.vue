@@ -22,7 +22,6 @@
                     <ion-button expand="block" class="logoutbotton">log out</ion-button>
                 </router-link>
             </div>
-
         </ion-content>
     </ion-page>
 </template>
@@ -42,7 +41,15 @@
     position: relative;
     top: 12%;
 }
-
+.logoutbotton {
+  width: 80%;
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+}
 
 ion-content {
     --background: #f2f2f2;
